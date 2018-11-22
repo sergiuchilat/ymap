@@ -20,7 +20,7 @@ function generateLinks(){
  * */
 function handleCalculationEND(){
     setTimeout(function () {
-        if(distances.length >= totalPointLinks - 1){
+        if(totalCalculatedDistances >= totalPointLinks - 1){
             makeRoute();
         }else{
             handleCalculationEND();
@@ -56,6 +56,7 @@ function calculateDistance(i) {
         let activeRoute = route.getActiveRoute();
         len = activeRoute.properties.get("distance").value;
         distances[i] = len;
+        totalCalculatedDistances++
     });
 }
 

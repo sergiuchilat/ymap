@@ -26,3 +26,4 @@ let routeOpacity = 0.7;
 let pointLinks = [];
 let distances = [];
 let totalPointLinks = 0;
+let totalCalculatedDistances = 0;
